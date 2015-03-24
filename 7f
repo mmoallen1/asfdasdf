@@ -1,0 +1,12 @@
+#include <iostream>
+#include <cstdlib>
+
+using namespace std;
+
+int main()
+{
+    int number;
+    for (number = 0; number <= 10; number++)
+        cout<< rand()%30 <<endl;
+    return 0;
+}
