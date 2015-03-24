@@ -1,0 +1,55 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+double x;
+double y;
+char choice;
+do
+{
+    cout<<"Enter a number Greater than Five"<<endl;
+    cin>>x;
+}while (x<=5);
+cout<<"That is bigger than Five!\n"<<endl;
+
+do
+{
+    cout<<"Enter a number less than Zero"<<endl;
+    cin>>y;
+}while (y>=0);
+cout<<"That is less than Zero!"<<endl;
+
+
+
+do
+{
+    cout<<"\nMenu\n"<<endl;
+    cin >> choice;
+    switch(choice){
+
+    case 'a':
+            cout << "You chose A";
+            break;
+    case 'b':
+            cout << "You chose B";
+            break;
+    case 'c':
+            cout << "You chose C";
+            break;
+    default:
+            cout << "Wrong";
+            break;
+    }
+    cout << "\n" << choice;
+
+}while (choice!='a'&& choice!='b'&& choice!='c');
+
+
+cout<<"\nGood choice!"<<endl;
+
+
+
+    return 0;
+}
