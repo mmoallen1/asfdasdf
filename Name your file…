@@ -1,0 +1,31 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    double price;
+    double tip;
+    double finalcost;
+    char goagain;
+
+    goagain = 'y';
+
+    while (goagain == 'y') {
+            cout<<"Enter cost of meal"<<endl;
+            cin>>price;
+            cout<<"Enter amount of tip in decimals"<<endl;
+            cin>>tip;
+        finalcost = (price * tip) + price;
+        cout<<"\nYour final cost of the meal is: $"<<finalcost<<endl;
+        cout<<"\nEnter 'y' to continue"<<endl;
+        cin>>goagain;
+
+
+
+
+    }
+
+    cout<<"You are finished running the loop"<<endl;
+    return 0;
+}
