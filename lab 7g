@@ -1,0 +1,30 @@
+#include <iostream>
+#include "WSstockQuote/stockQuote.h"
+
+using namespace std;
+
+int main()
+{
+    int numstocks;
+    double totalcost=0, stockValue;
+    string stocksymbol;
+    int num;
+    cout<<"Enter the amount of stocks"<<endl;
+    cin>>numstocks;
+
+    for (int count=0; count < numstocks; count++)
+    {
+        cout<<"Enter the stock symbol: "<<endl;
+        cin >> stocksymbol;
+        cout << "How many Stocks : " << endl;
+        cin >> num;
+        stockValue = getQuote(stocksymbol);
+
+        totalcost = totalcost + (num * stockValue);
+
+   }
+
+    cout << "Total : $" << totalcost;
+
+    return 0;
+}
