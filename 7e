@@ -1,0 +1,34 @@
+#include<iostream>
+using namespace std;
+
+int main( ) {
+    int numstudents;
+    int numtests;
+
+double total;
+double average;
+
+cout<<"This program averages tests scores."<<endl;
+cout<<"For how many students do you have scores?"<<endl;
+cin>>numstudents;
+
+cout<<"How many test scores does each student have?";
+cin>>numtests;
+
+for (int student = 1; student <= numstudents; student++)
+{
+    total = 0;
+    for (int test = 1; test <= numtests; test++)
+    {
+        double score;
+        cout<<"Enter Score " <<test<<" for ";
+        cout<<"student " << student <<" : ";
+        cin>>score;
+        total+= score;
+    }
+    average = total / numtests;
+    cout<<"The average score for student " << student;
+    cout<< " is " << average << ".\n\n";
+}
+return 0;
+}
