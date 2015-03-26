@@ -1,0 +1,113 @@
+#include <iostream>
+
+using namespace std;
+
+void mainMenu();
+void createAccount();
+void login();
+void loginmenu();
+void displaybalance();
+void depositmoney();
+void withdrawmoney();
+
+string loginname;
+string loginpassword;
+double balance=0;
+
+    int main()
+{
+    mainMenu();
+    return 0;
+}
+
+void mainMenu(){
+    char choice;
+    cout<<"Main Menu\n\n C. Create bank account information\n L. Login\n E. Exit"<<endl;
+    cin>>choice;
+switch (choice){
+    case 'C':
+    case 'c':
+    createAccount();
+    break;
+
+    case 'L':
+    case 'l':
+    login();
+    break;
+
+    default: cout<<"The program will now exit"<<endl;
+}
+}
+
+
+void createAccount(){
+    cout<<"Enter your desired login username"<<endl;
+    cin>>loginname;
+    cout<<"Enter your desired login password"<<endl;
+    cin>>loginpassword;
+    mainMenu();
+}
+
+void login(){
+
+string username;
+string password;
+cout<<"Enter your username"<<endl;
+cin>>username;
+cout<<"Enter your password"<<endl;
+cin>>password;
+if (username.compare(loginname) == 0 && password.compare(loginpassword) == 0)
+    loginmenu();
+else {
+    cout<<"Your login failed"<<endl;
+    mainMenu();
+}
+}
+
+void loginmenu(){
+    char choice2;
+cout<<"Account Info\n\n W. Withdraw Money\n D. Deposit Money\n B. Account Balance\n Q. Quit"<<endl;
+cin>>choice2;
+switch (choice2){
+    case 'W':
+    case 'w':
+    withdrawmoney();
+    break;
+
+    case 'D':
+    case 'd':
+    depositmoney();
+    break;
+
+    case 'B':
+    case 'b':
+    displaybalance();
+
+    default: cout<<"The program will now exit"<<endl;
+}
+}
+
+void displaybalance(){
+cout<<"Your balance is currently: $"<<balance<<endl;
+loginmenu();
+}
+
+void depositmoney(){
+    double moneyin;
+cout<<"How much money do you wish to deposit?"<<endl;
+cin>>moneyin;
+balance = moneyin + balance;
+loginmenu();
+}
+
+void withdrawmoney(){
+    double moneyout;
+    cout<<"How much money would you like to withdraw?"<<endl;
+    cin>>moneyout;
+if (moneyout > balance)
+    cout<<"Insufficient funds"<<endl;
+else
+    balance = balance - moneyout;
+    loginmenu();
+
+}
