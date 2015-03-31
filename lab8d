@@ -1,0 +1,36 @@
+#include <iostream>
+
+using namespace std;
+
+void getscore();
+void calcaverage();
+int findlowest();
+int main()
+{
+    getscore();
+    return 0;
+}
+
+void getscore()
+{
+    double score[4];
+    for (int i=0; i<4; i++)
+    {
+        cout<<"Enter your test score:"<<endl;
+        cin>>score[i];
+        if (score[i]<0 || score[i]>100)
+            cout<<"Invalid choice"<<endl;
+        else
+            cout<<"it works"<<endl;
+    }
+}
+
+void calcaverage()
+{
+
+}
+
+int findlowest()
+{
+
+}
