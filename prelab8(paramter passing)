@@ -1,0 +1,58 @@
+#include <iostream>
+
+using namespace std;
+void getNextOddByValue(int value);
+void getNextOddByReference(int &value);
+int main()
+{
+int num = 12;
+
+     // Display the value of num
+     cout << "Number before function call (pass-by-value):" << num << endl;
+
+ 	// Pass-By-Value
+  	// Function call to pass num as value
+  	getNextOddByValue(num);
+
+  	// Display the value of num
+  	cout << "Number after function call (pass-by-value):" << num << endl;
+
+  	// Display the value of num
+  	cout << "\nNumber before function call (pass-by-reference):" << num << endl;
+
+    	// Pass-By-Value
+  	// Function call to pass num as reference
+  	getNextOddByReference (num);
+
+  	// Display the value of num
+  	cout << "Number after function call (pass-by-reference):" << num << endl;
+
+return 0;
+}
+
+
+void getNextOddByValue(int value)
+{
+	// If value is even then, increment by 1 to get
+     // next odd number
+	if (value % 2 == 0)
+		value = value + 1;
+else	// If value is odd then, increment by 2 to // get next odd number
+		value = value + 2;
+
+	// Display the odd number
+cout << "Next odd number from Pass-By-Value:" << value <<endl;
+}
+
+void getNextOddByReference(int &value)
+{
+	// If value is even then, increment by 1 to get
+     // next odd number
+	if (value % 2 == 0)
+		value = value + 1;
+else	// If value is odd then, increment by 2 to // get next odd number
+		value = value + 2;
+
+	// Display the odd number
+cout << "Next odd number from Pass-By-Reference: " << value <<endl;
+}
