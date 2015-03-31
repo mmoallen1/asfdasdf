@@ -1,0 +1,52 @@
+#include <iostream>
+
+using namespace std;
+void totalarea();
+void paintcost();
+double gallonsofpaint(double);
+int main()
+{
+    double areahouse;
+    totalarea();
+    paintcost();
+    gallonsofpaint(areahouse);
+    return 0;
+}
+
+void totalarea()
+{
+    double areahouse;
+    cout<<"Enter the area of the house in feet"<<endl;
+    cin>>areahouse;
+}
+
+void paintcost()
+{
+    double costofpaint;
+    cout<<"What is the cost of 1 paint bucket?"<<endl;
+    cin>>costofpaint;
+    if (costofpaint<10)
+    cout<<"please enter a cost greater than 10$"<<endl;
+    else
+        
+
+}
+
+double gallonsofpaint(double areahouse)
+{
+    double totalpaint;
+    totalpaint = areahouse / 115;
+    cout<<"You will need "<<totalpaint<<" gallons of paint"<<endl;
+}
+
+double hoursoflabor (double areahouse)
+{
+    double totalhours
+    totalhours = (areahouse / 115) * 8;
+    cout<<"It will take "<<totalhours<<" hours to paint your home"<<endl;
+}
+
+double totalcostofpaint (double totalpaint, double costofpaint)
+{
+     finalcostofpaint = totalpaint * costofpaint;
+}
