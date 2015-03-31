@@ -1,0 +1,48 @@
+#include <iostream>
+
+using namespace std;
+double getLength();
+double getWidth();
+double getArea(double, double);
+void displaydata(double, double, double);
+int main()
+{
+    double length;
+    double width;
+    double area;
+    length = getLength();
+    width = getWidth();
+    area = getArea(length, width);
+    displaydata(length, width, area);
+
+    return 0;
+}
+
+double getLength()
+{
+    double length;
+    cout<<"Enter the rectangle's length"<<endl;
+    cin>>length;
+    return length;
+
+}
+
+double getWidth()
+{
+    double width;
+    cout<<"Enter the rectangle's width"<<endl;
+    cin>>width;
+    return width;
+}
+
+double getArea(double length, double width)
+{
+    double area;
+    area = length * width;
+    return area;
+}
+
+void displaydata(double length, double width, double area)
+{
+    cout<<"\nThe Length of the rectangle is: "<<length<<"\nThe Width of the rectangle is: "<<width<<"\nThe Area for the rectangle is: "<<area<<endl;
+}
