@@ -1,0 +1,48 @@
+#include <iostream>
+
+using namespace std;
+double getLength();
+double getWidth();
+double getArea(double, double);
+void displaydata(double, double, double);
+const int SIZE = 5;
+int main()
+{
+    double length[SIZE];
+    double width[SIZE];
+    double areas[SIZE];
+    for(int i=0; i<5; i++)
+    {
+        length[i] = getLength();
+        width[i] = getWidth();
+        areas[i] = length[i] * width[i];
+    }
+    for(int i=0; i<5; i++)
+    {
+        cout<<"For length " << length[i] << " and width " << width[i] << " , the area is : " << areas[i]<<endl;
+    }
+    return 0;
+}
+
+double getLength()
+{
+    double length1;
+    cout<<"Enter the rectangle's length"<<endl;
+    cin>>length1;
+    return length1;
+
+}
+
+double getWidth()
+{
+    double width1;
+    cout<<"Enter the rectangle's width"<<endl;
+    cin>>width1;
+    return width1;
+}
+
+
+void displaydata(double length, double width, double area)
+{
+    cout<<"\nThe Length of the rectangle is: "<<length<<"\nThe Width of the rectangle is: "<<width<<"\nThe Area for the rectangle is: "<<area<<endl;
+}
